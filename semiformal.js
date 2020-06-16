@@ -75,22 +75,22 @@ const schoolList = [
 
 const configs = [
   {
-    id: "formal-email-board",
-    email: formalEmail,
+    id: "semiformal-email-board",
+    email: semiformalEmail,
     recipients: boardList,
   },
   {
-    id: "formal-email-partners",
-    email: formalEmail,
+    id: "semiformal-email-partners",
+    email: semiformalEmail,
     recipients: partnerList,
   },
   {
-    id: "formal-email-schools",
-    email: formalEmail,
+    id: "semiformal-email-schools",
+    email: semiformalEmail,
     recipients: schoolList,
   },
   {
-    id: "formal-email-all",
+    id: "semiformal-email-all",
     email: formalEmail,
     recipients: [...boardList, ...partnerList, ...schoolList],
   },
