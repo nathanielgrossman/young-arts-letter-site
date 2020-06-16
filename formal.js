@@ -127,6 +127,7 @@ const generateHref = (config) => {
     return i === arr.length - 1 ? `${acc}${email}&` : `${acc}${email}, `;
   }, "cc=");
   const link = `mailto:${firstRecipient}?${cc}subject=young%20arts%20email&body=${config.email}`;
+  console.log('config', config)
   document.getElementById(config.id).href = link;
 };
 
