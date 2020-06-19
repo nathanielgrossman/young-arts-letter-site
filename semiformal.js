@@ -95,6 +95,8 @@ const configs = [
   },
 ];
 
+const subject = "A Community Vision for An Equitable Future at YoungArts";
+
 const copyButtonMap = {
   "formal-copy": formalEmail,
   "semiformal-copy": semiformalEmail,
@@ -105,7 +107,7 @@ const generateHref = (config) => {
   const cc = config.recipients.slice(1).reduce((acc, email, i, arr) => {
     return i === arr.length - 1 ? `${acc}${email}&` : `${acc}${email}, `;
   }, "cc=");
-  const link = `mailto:${firstRecipient}?${cc}subject=young%20arts%20email&body=${config.email}`;
+  const link = `mailto:${firstRecipient}?${cc}subject=${subject}&body=${config.email}`;
   document.getElementById(config.id).href = link;
 };
 
