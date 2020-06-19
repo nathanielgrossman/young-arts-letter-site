@@ -97,9 +97,21 @@ const configs = [
 
 const subject = "A Community Vision for An Equitable Future at YoungArts";
 
+const formatEmailCallback = (acc, email, i, arr) =>
+  i === arr.length - 1 ? `${acc}${email}` : `${acc}${email}, `;
+
+const copyableEmailList = `
+YoungArts Board: ${boardList.reduce(formatEmailCallback, "")}
+
+Corporate + Foundation Partners: ${boardList.reduce(formatEmailCallback, "")}
+
+Top Tier Art Schools: ${boardList.reduce(formatEmailCallback, "")}
+`;
+
 const copyButtonMap = {
   "formal-copy": formalEmail,
   "semiformal-copy": semiformalEmail,
+  "recipients-copy": copyableEmailList,
 };
 
 const generateHref = (config) => {
